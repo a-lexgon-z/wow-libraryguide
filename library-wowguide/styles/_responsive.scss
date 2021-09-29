@@ -1,0 +1,35 @@
+/*Smaller screens*/
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .nav-link {
+        justify-content: center;
+    }
+}
+
+/*Bigger screens*/
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+        &:hover {
+            width: 16rem;
+        }
+        &:hover .link-text {
+            display: inline;
+        }
+    }
+    #topBtn {
+        @include topBtn();
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+}
